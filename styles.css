@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@font-face {
+	font-family: Outfit;
+	src: url(/assets/fonts/outfit/static/Outfit-Regular.ttf);
+}
+
+@font-face {
+	font-family: Outfit-Semi-Bold;
+	src: url(/assets/fonts/outfit/static/Outfit-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: Outfit-Bold;
+	src: url(/assets/fonts/outfit/static/Outfit-Bold.ttf);
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--border-radius: 1rem;
+	--background: hsl(30, 54%, 90%);
+	--brown: hsl(14, 45%, 36%);
+	--img-pad: 2rem;
+	--main-bg: hsl(0, 0%, 100%);
+	--padding: 0.5rem;
+	--rose-light: hsl(330, 100%, 98%);
+	--rose-font: hsl(332, 51%, 32%);
+	--stone-150: hsl(30, 18%, 87%);
+	--stone-600: hsl(30, 10%, 34%);
+}
+
+body {
+	background-color: var(--background);
+}
+
+main {
+	margin: 7rem auto 2rem auto;
+	max-width: 740px;
+	background-color: var(--main-bg);
+	border-radius: var(--border-radius);
+}
+
+.image {
+	padding: var(--img-pad) var(--img-pad) 0 var(--img-pad);
+	margin-bottom: 0rem;
+}
+
+img {
+	display: block;
+	width: 100%;
+	border-radius: var(--border-radius);
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+}
+
+.padding {
+	padding: 2rem;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+p {
+	font-size: 1rem;
+	color: hsl(30, 10%, 34%);
+	font-family: Outfit, sans-serif;
+}
+
+ul,
+ol {
+	padding: 1rem;
+}
+
+li::marker {
+	color: var(--brown);
+	font-family: Outfit-Bold, sans-serif;
+}
+
+li {
+	font-family: Outfit, sans-serif;
+	padding: 0.5rem;
+}
+
+h1 {
+	font-family: "Young Serif", serif;
+	font-size: min(2.2rem, 10vw);
+}
+
+.prep {
+	background-color: var(--rose-light);
+	border-radius: var(--border-radius);
+	padding: 1.2rem 2rem 0 2rem;
+	font-family: Outfit-Bold, sans-serif;
+}
+
+.prep li::marker {
+	color: var(--rose-font);
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+.rose {
+	color: var(--rose-font);
+}
+.bold {
+	font-family: Outfit-Bold, sans-serif;
+	color: var(--stone-600);
+}
+.semi-bold {
+	font-family: Outfit-Semi-Bold, sans-serif;
+	color: var(--stone-600);
+}
+
+.ingredients::marker,
+.instructions::marker {
+	color: var(--brown);
+}
+
+h3 {
+	font-size: 1.6rem;
+	font-family: "Young Serif", sans-serif;
+}
+
+.brown {
+	color: var(--brown);
+}
+
+.ingredients ul:last-child {
+	margin-bottom: 0.5rem;
+}
+
+.border-bottom {
+	border-bottom: 1px solid var(--stone-150);
+}
+
+.nutrition ul li {
+	display: flex;
+	margin: 0.5rem;
+}
+
+.nutrition ul li:last-of-type {
+	display: flex;
+	margin-bottom: 0rem;
+}
+
+.nutrition li p {
+	width: 50%;
+	margin-right: 5%;
+	display: flex;
+	align-items: center;
+}
+
+.nutrition span {
+	display: block;
+	width: 50%;
+}
+
+@media (max-width: 600px) {
+	body {
+		justify-content: flex-start;
+	}
+
+	main {
+		margin: 0;
+	}
+
+	.image {
+		--img-pad: 0rem;
+	}
+
+	img {
+		border-radius: 0rem;
+	}
+}
